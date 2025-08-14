@@ -219,7 +219,13 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; <a href="https://www.linkedin.com/in/igargikaushik/ " target="_blank">2024 Gargi Kaushik</a></li></ul>
+<ul>
+  <li>&copy; <a href="https://www.linkedin.com/in/igargikaushik/" target="_blank"><span id="year"></span> Gargi Kaushik</a></li>
+</ul>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 					</div>
 			</div>
 
@@ -235,5 +241,6 @@
 
 	</body>
 </html>
+
 
 
