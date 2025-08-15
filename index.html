@@ -25,8 +25,7 @@
 
 						<section class="featured-blogpost">
 							<header class="major">
-								<h2>Latest Blog Post</h2>
-								<a href="blog.html" >Check out my recent blogposts related to machine learning, deep learning, and more!</a>
+								<a href="blog.html" >Check out my recent blogposts!..</a>
 							</header>
 						</section>
 					</div>
@@ -42,7 +41,7 @@
 						<ul class="links">
 		                  <li class="active"><a href="index.html">Projects</a></li>
                           <li><a href="about.html">About</a></li>
-                          <li><a href="hhttps://drive.google.com/file/d/15-4akB9zedOijNV9T2-w3tm3eddtvZRW/view?usp=sharing" target="_blank">Resume</a></li>
+                          <li><a href="https://drive.google.com/file/d/15-4akB9zedOijNV9T2-w3tm3eddtvZRW/view?usp=sharing" target="_blank">Resume</a></li>
                           <li><a href="blog.html">Blog</a></li>
 
 						</ul>
@@ -64,125 +63,159 @@
 
 					<div id="main">
 
-						<!-- Featured Post -->
-						<h3><a href="#header">Gargi's Projects</a></h3>
+					
+<h3><a href="#header">Gargi's Projects</a></h3>
+<!-- Skill Badges -->
+<div class="skill-badges">
+    <span class="badge active" data-skill="all">All</span>
+    <span class="badge" data-skill="Machine Learning">Machine Learning</span>
+    <span class="badge" data-skill="Flask">Flask</span>
+    <span class="badge" data-skill="SQL">SQL</span>
+    <span class="badge" data-skill="HTML/CSS">HTML/CSS</span>
+    <span class="badge" data-skill="NLP">NLP</span>
+    <span class="badge" data-skill="Browser Extension">Browser Extension</span>
+    <span class="badge" data-skill="Computer Vision">Computer Vision</span>
+    <span class="badge" data-skill="Deep Learning">Deep Learning</span>
+    <span class="badge" data-skill="CNN">CNN</span>
+    <span class="badge" data-skill="PyTorch">PyTorch</span>
+    <span class="badge" data-skill="OpenCV">OpenCV</span>
+    <span class="badge" data-skill="Web Development">Web Development</span>
+    <span class="badge" data-skill="Multi-Agent Systems">Multi-Agent Systems</span>
+        <span class="badge" data-skill="JavaScript">JavaScript</span>
+         <span class="badge" data-skill="C#">C#</span>
 
-						<article class="post featured">
-							<header class="major">
-								<h5>Most Recent</h5>
-								<span class="date">Apr 14, 2024</span>
-						
-								<h2>
-									<a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank">
-										AutoHire AI
-									</a>
-								</h2>
-								<p>
-									AI-driven multi-agent system for automated job screening, candidate matching, and email-notifier.</p>
-							</header>
-							
-							<a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank" class="image main">
-								<img src="images/autohire.png" alt="autoHireAI project preview" />
-							</a>
-						
-							<ul class="actions special">
-								<li>
-									<a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank" class="button small">
-										Code
-									</a>
-								</li>
-							</ul>
-						</article>
-						
+    <span class="badge" data-skill="Game Development">Game Dev Unity</span>
+</div>
 
-						<!-- Posts -->
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const badges = document.querySelectorAll(".badge");
+    const articles = document.querySelectorAll("section.posts article");
+
+    badges.forEach(badge => {
+        badge.addEventListener("click", () => {
+            // Highlight active badge
+            badges.forEach(b => b.classList.remove("active"));
+            badge.classList.add("active");
+
+            const skill = badge.getAttribute("data-skill");
+
+            articles.forEach(article => {
+                const skills = article.getAttribute("data-skills").split(",").map(s => s.trim());
+                if (skill === "all" || skills.includes(skill)) {
+                    article.style.display = "block";
+                } else {
+                    article.style.display = "none";
+                }
+            });
+        });
+    });
+});
+</script>
+
+	
+
+			<!-- Posts -->
 						<section class="posts">
-							<article>
-								<header>
-									<span class="date">Jan 18, 2025</span>
-									<h3><a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank">
-										SumX
-									</a></h3>
-								</header>
-								
-								<a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank" class="image main">
-									<img src="images/sumx.png" alt="SumX project preview" />
-								</a>
-								summarize articles, highlight keywords, and generate citations using AI -interact with the summarization tool directly from browser.								<ul class="actions special">
-									<li>
-										<a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank" class="button small">
-											Code
-										</a>
-									</li>
-								</ul>
-							</article>
+	<article class="post" data-skills="Machine Learning, Multi-Agent Systems, NLP, Web Development, Flask, Python, SQL, HTML/CSS, JavaScript">
+        <header>
+			<span class="date">Jan 18, 2025</span>
 
-							<article>
-								<header>
-									<span class="date">Sep 17, 2024</span>
-									<h3><a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank">
-										Car-ReIdentification
-									</a></h3>
-								</header>
-								
-								<a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank" class="image main">
-									<img src="images/car_ide.jpg" alt="Car Re-Identification project preview" />
-								</a>
-								model for vehicle multiple identification, searches the database for a specific vehicle using a photographed image.
-								<ul class="actions special">
-									<li>
-										<a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank" class="button small">
-											Code
-										</a>
-									</li>
-								</ul>
-							</article>
+            <h3>
+                <a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank">AutoHireAI
+                </a>
+            </h3>
+        </header>
+        <a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank" class="image fit">
+            <img src="images/autohire.png" alt="autoHireAI project preview" />
+        </a>   AI-driven multi-agent system for automated job screening, candidate matching, and email-notifier.
 
-								<article>
-									<header>
-										<span class="date">Mar 30, 2024</span>
-										<h3><a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank">Real-time-drowsiness-detection 
-											  System
-										</a></h3>
-									</header>
-									<a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank" class="image fit"><img src="images/drowww.jpg" alt="" /></a>
-									<p>model to detect signs of drowsiness in individuals,visualising eye formation, particularly aimed at applications like driver monitoring systems.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank" class="small button">code</a></li>
-									</ul>
-								</article>
+        <ul class="actions special">
+            <li>
+                <a href="https://github.com/igargikaushik/autoHire_AI/blob/main/README.md" target="_blank" class="button small">
+                    Code
+                </a>
+            </li>
+        </ul>
+    </article>
 
+    <article data-skills="AI,Machine Learning, NLP, Browser Extension">
+        <header>
+            <span class="date">Jan 18, 2025</span>
+            <h3>
+                <a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank">SumX</a>
+            </h3>
+        </header>
+        <a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank" class="image main">
+            <img src="images/sumx.png" alt="SumX project preview" />
+        </a>
+        summarize articles, highlight keywords, and generate citations using AI - interact with the summarization tool directly from browser.
+        <ul class="actions special">
+            <li>
+                <a href="https://github.com/igargikaushik/sumX/blob/main/README.md" target="_blank" class="button small">Code</a>
+            </li>
+        </ul>
+    </article>
 
-								<article>
-									<header>
-										<span class="date">feb 26, 2024</span>
-										<h3><a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank">flappyBird<br />
-										</a></h3>
-									</header>
-									<a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank" class="image fit"><img src="images/flp-brd.jpg" alt="" /></a>
-									<p>a classic 2D platformer game inspired by the famous "Flappy Bird".
+    <article data-skills="Computer Vision, Machine Learning, Deep Learning, CNN, Python, PyTorch">
+        <header>
+            <span class="date">Sep 17, 2024</span>
+            <h3>
+                <a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank">Car-ReIdentification</a>
+            </h3>
+        </header>
+        <a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank" class="image main">
+            <img src="images/car_ide.jpg" alt="Car Re-Identification project preview" />
+        </a>
+        model for vehicle multiple identification, searches the database for a specific vehicle using a photographed image.
+        <ul class="actions special">
+            <li>
+                <a href="https://github.com/igargikaushik/Car-ReIdentification/blob/main/README.md" target="_blank" class="button small">Code</a>
+            </li>
+        </ul>
+    </article>
 
-									</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank"class="button small">code</a></li>
-									</ul>
-								</article>
+    <article data-skills="Computer Vision,Deep Learning, CNN , Python, OpenCV">
+        <header>
+            <span class="date">Mar 30, 2024</span>
+            <h3>
+                <a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank">
+                    Real-time-drowsiness-detection System
+                </a>
+            </h3>
+        </header>
+        <a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank" class="image fit">
+            <img src="images/drowww.jpg" alt="" />
+        </a>
+        <p>model to detect signs of drowsiness in individuals, visualising eye formation, particularly aimed at applications like driver monitoring systems.</p>
+        <ul class="actions special">
+            <li>
+                <a href="https://github.com/igargikaushik/real-time-drowsiness-detection-system/blob/main/README.md" target="_blank" class="small button">code</a>
+            </li>
+        </ul>
+    </article>
 
-								<article>
-									<header>
-										<span class="date"></span>
-										<h3><a href="#"><br />
-								          </a></h3>
-									</header>
-									<a href="#" class="image fit"><img src="" alt="" /></a>
-									<p></p>
-									<ul class="actions special">
-										<li><a href="#" class=" "></a></li>
-									</ul>
-								</article>
+    <article data-skills="Game Development, Unity, C#">
+        <header>
+            <span class="date">Feb 26, 2024</span>
+            <h3>
+                <a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank">flappyBird</a>
+            </h3>
+        </header>
+        <a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank" class="image fit">
+            <img src="images/flp-brd.jpg" alt="" />
+        </a>
+        <p>a classic 2D platformer game inspired by the famous "Flappy Bird".</p>
+        <ul class="actions special">
+            <li>
+                <a href="https://github.com/igargikaushik/flappyBird/blob/main/README.md" target="_blank" class="button small">code</a>
+            </li>
+        </ul>
+    </article>
+</section>
 
-								
-							</section>
 
 						<!-- Footer -->
 							<footer>
@@ -219,7 +252,13 @@
 
 				<!-- Copyright -->
 					<div id="copyright">
-						<ul><li>&copy; <a href="https://www.linkedin.com/in/igargikaushik/ " target="_blank">2024 Gargi Kaushik</a></li></ul>
+<ul>
+  <li>&copy; <a href="https://www.linkedin.com/in/igargikaushik/" target="_blank"><span id="year"></span> Gargi Kaushik</a></li>
+</ul>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 					</div>
 			</div>
 
